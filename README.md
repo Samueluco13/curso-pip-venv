@@ -1,7 +1,8 @@
-#GAME PROJECT
+# GAME PROJECT
 
 Para correr el juego debes seguir estas instrucciones en la terminal:
 
 ```sh
-python3 game.py
+cd game
+python3 main.py
 ```
