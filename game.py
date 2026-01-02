@@ -7,35 +7,36 @@ def computer_choice():
 
 def menu():
     print("Welcome to Rock, Paper, Cissors Game")
-    return int(input("Elige el numero de tu opcion:\n1. Rock\n2. Paper\n3. Cissors\n---------------------------"))
+    return int(input("Elige el numero de tu opcion:\n1. Rock\n2. Paper\n3. Cissors\n"))
 
 def user_choice():
     choice = menu()
     return options[choice - 1]
 
+def winner():
+    user = user_choice()
+    computer = computer_choice()
+    if user == computer:
+        return print("Empate")
 
-def winner(user_choice, computer_choice):
-    if user_choice == computer_choice:
-        return "Empate"
-
-    if user_choice == "Rock":
-        match computer_choice:
+    if user == "Rock":
+        match computer:
             case "Cissors":
-                return "Usuario gana"
+                return print("Usuario gana")
             case "Paper":
-                return "Computador gana"
+                return print("Computador gana")
 
-    if user_choice == "Paper":
-        match computer_choice:
+    if user == "Paper":
+        match computer:
             case "Cissors":
-                return "Computador gana"
+                return print("Computador gana")
             case "Rock":
-                return "Usuario gana"
+                return print("Usuario gana")
 
-    if user_choice == "Cissors":
-        match computer_choice:
+    if user == "Cissors":
+        match computer:
             case "Rock":
-                return "Computador gana"
+                return print("Computador gana")
             case "Paper":
-                return "Usuario gana"
-
+                return print("Usuario gana")
+winner()
